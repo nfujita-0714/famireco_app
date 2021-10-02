@@ -12,27 +12,20 @@
 
 ----------------------
 # 開発言語
-Ruby2.6.5
-
-Rails5.2.5
-
+- Ruby2.6.5
+- Rails5.2.5
 ----------------------
 # 就職termの技術
-devise
-
-お気に入り機能
-
+- devise
+- お気に入り機能
 ----------------------
 # カリキュラム外の技術
-ransack
-
+- ransack
 ----------------------
 # カリキュラムの技術
-rails_admin
-
-kaminari
-
-cancancan
+- rails_admin
+- kaminari
+- cancancan
 
 # 実行手順
 ----------------------
@@ -53,7 +46,7 @@ https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8l
 https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8lB-c/edit#gid=866054258
 
 # ワイヤーフレーム
-https://app.diagrams.net/?libs=general;mockups#G143Sh9hPtjqs-9R1KZJFl031wB0jge68_
+https://drive.google.com/file/d/143Sh9hPtjqs-9R1KZJFl031wB0jge68_/view?usp=sharing
 
 # ER図
 ----------------------
