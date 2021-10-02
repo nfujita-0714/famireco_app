@@ -37,7 +37,7 @@ $ bundle install
 
 $ rails db:create && rails db:migrate
 
-$ yarn add jquery
+$ yarn
 
 $ rails s -b 0.0.0.0
 
@@ -48,11 +48,11 @@ https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8l
 https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8lB-c/edit?usp=sharing
 
 # ワイヤーフレーム
-https://drive.google.com/file/d/143Sh9hPtjqs-9R1KZJFl031wB0jge68_/view?usp=sharing
+https://docs.google.com/spreadsheets/d/1xlJuuC-HUNu3HtubOfKTI4sjORreMOuNcBDto52KPsQ/edit?usp=sharing
 
-# ER図-2
+# ER図-3
 ----------------------
-![03_ER図 drawio (2)](https://user-images.githubusercontent.com/85795737/135708389-779ffbe7-c894-4459-b772-de0bd4c1e613.png)
+![03_ER図 drawio (3)](https://user-images.githubusercontent.com/85795737/135721086-b3c58b14-9fd6-4ddf-9638-3325771a8310.png)
 
 # 画面遷移図
 ----------------------
