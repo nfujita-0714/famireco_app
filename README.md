@@ -37,21 +37,28 @@ $ bundle install
 
 $ rails db:create && rails db:migrate
 
+$ yarn add jquery
+
 $ rails s -b 0.0.0.0
 
 # カタログ設計
-https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8lB-c/edit#gid=866054258
+https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8lB-c/edit?usp=sharing
 
 # テーブル定義書
-https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8lB-c/edit#gid=866054258
+https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8lB-c/edit?usp=sharing
 
 # ワイヤーフレーム
 https://drive.google.com/file/d/143Sh9hPtjqs-9R1KZJFl031wB0jge68_/view?usp=sharing
 
-# ER図
+# ER図-2
 ----------------------
-![03_ER図 drawio](https://user-images.githubusercontent.com/85795737/135704022-976e84a9-a032-4425-a3e4-748929b175a9.png)
+![03_ER図 drawio (2)](https://user-images.githubusercontent.com/85795737/135708389-779ffbe7-c894-4459-b772-de0bd4c1e613.png)
 
 # 画面遷移図
 ----------------------
 ![04_画面遷移図 drawio](https://user-images.githubusercontent.com/85795737/135704033-3ae1359f-1faa-418d-846e-017de7b132fd.png)
+
+# チェックシート
+----------------------
+https://docs.google.com/spreadsheets/d/1AMd3qGYkVKojDCP1gCiWgefQxUUNbg4U/edit?usp=sharing&ouid=115359983916499361032&rtpof=true&sd=true
+
