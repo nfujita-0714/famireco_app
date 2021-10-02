@@ -32,10 +32,14 @@ cancancan
 
 # 実行手順
 ----------------------
-'''$ git clone git@github.com:nfujita-0714/famireco_app.git
+$ git clone git@github.com:nfujita-0714/famireco_app.git
+
 $ cd famireco
+
 $ bundle install
+
 $ rails db:create && rails db:migrate
+
 $ rails s -b 0.0.0.0'''
 
 # カタログ設計
