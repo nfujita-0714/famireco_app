@@ -35,11 +35,12 @@ $ cd famireco
 
 $ bundle install
 
+$ yarn install
+
 $ rails db:create && rails db:migrate
 
-$ yarn
-
 $ rails s -b 0.0.0.0
+
 
 # カタログ設計
 https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8lB-c/edit?usp=sharing
@@ -48,7 +49,7 @@ https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8l
 https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8lB-c/edit?usp=sharing
 
 # ワイヤーフレーム
-https://docs.google.com/spreadsheets/d/1xlJuuC-HUNu3HtubOfKTI4sjORreMOuNcBDto52KPsQ/edit?usp=sharing
+https://docs.google.com/presentation/d/1jDCS3sBeXrcG0wlis26qeEuuckCL4RdBHA5uRYq2x-c/edit?usp=sharing
 
 # ER図-3
 ----------------------
