@@ -40,7 +40,7 @@ $ bundle install
 
 $ rails db:create && rails db:migrate
 
-$ rails s -b 0.0.0.0'''
+$ rails s -b 0.0.0.0
 
 # カタログ設計
 https://docs.google.com/spreadsheets/d/1trPSNjS3JRWMbFOHWZY1j-rddLd8OsCRQSaREe8lB-c/edit#gid=866054258
