@@ -1,4 +1,5 @@
 class PicturesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_picture, only: %i[ show edit update destroy ]
 
   # GET /pictures or /pictures.json
