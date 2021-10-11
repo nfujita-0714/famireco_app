@@ -12,6 +12,7 @@
   <body>
 
   <ul class="nav navbar-nav">
+      <li><%= link_to "TOPページ", root_path %></li>
     <% if user_signed_in? %>
       <li class="active"><%= link_to "投稿一覧", pictures_path %>
       <li class="active"><%= link_to "ログアウト",  destroy_user_session_path, method: :delete %></li>
