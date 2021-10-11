@@ -1,20 +1,20 @@
 <h1>お気に入り一覧</h1>
 
 <div>
-  <% @favorites.each do |picture| %>
+  <% @favorites.each do |favorite| %>
     <div>
-      <%= image_tag picture.image.url %>
+      <%= image_tag favorite.picture.image.url %>
     </div>
     <div>
-      <%= picture.content %>       
-      <% picture.labels.each do |label| %>
+      <%= favorite.picture.content %>       
+      <% favorite.picture.labels.each do |label| %>
         <%= label.name %>
       <% end %>
       <br>
-      <%= link_to '投稿詳細', picture_path(picture) %>
+      <%= link_to '投稿詳細', picture_path(favorite.picture.id) %>
     </div>
     <div>
-      <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>
+      <%= link_to 'お気に入り解除する', favorite_path(favorite.id), method: :delete, class: 'btn btn-danger' %>
     </div>
   <% end %>
 </div>
