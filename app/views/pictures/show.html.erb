@@ -1,26 +1,27 @@
-<p>
-  <strong>Image:</strong>
+<div>
   <%= image_tag @picture.image.url %>
-</p>
+</div>
 
-<p>
+<div>
   <strong>Content:</strong>
   <%= @picture.content %>
-</p>
-
-<p>
+</div>
+<div>
   <% @picture.labels.each do |label| %>
     <%= label.name %>
   <% end %>
-</p>
-
-<% unless @picture.user_id == current_user.id %>
-  <% if @favorite.present? %>
-    <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>
-  <% else %>
-    <%= link_to 'お気に入りする', favorites_path(picture_id: @picture.id), method: :post, class: 'btn btn-primary' %>
+</div>
+<div>
+  <% unless @picture.user_id == current_user.id %>
+    <% if @favorite.present? %>
+      <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>
+    <% else %>
+      <%= link_to 'お気に入りする', favorites_path(picture_id: @picture.id), method: :post, class: 'btn btn-primary' %>
+    <% end %>
   <% end %>
-<% end %>
-
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
+</div>
+<br>
+<div>
+<%= link_to '編集', edit_picture_path(@picture) %> |
+<%= link_to '戻る', pictures_path %>
+<div>

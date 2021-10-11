@@ -1,4 +1,9 @@
 class FavoritesController < ApplicationController
+  before_action :authenticate_user!
+  def index
+    @favorites = current_user.fav_pictures
+    @favorite = current_user.favorites.find_by(id: params[:id])
+  end
 
   def create
     favorite = current_user.favorites.create(picture_id: params[:picture_id])
