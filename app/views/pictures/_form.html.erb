@@ -20,6 +20,13 @@
     <%= form.label :content %>
     <%= form.text_area :content %>
   </div>
+  
+  <div class="field">
+    <% Label.all.each do |label| %>
+      <%= form.check_box :label_ids, { multiple: true, checked: @picture.labels.find_by(id: label.id).present?, include_hidden: false }, label[:id] %>
+      <label class='badge badge-secondary'><%= label.name %></label>
+    <% end %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>

@@ -1,4 +1,4 @@
 class Labeling < ApplicationRecord
   belongs_to :label
-  belongs_to :user
+  belongs_to :picture
 end

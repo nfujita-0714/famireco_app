@@ -5,6 +5,7 @@ class PicturesController < ApplicationController
   # GET /pictures or /pictures.json
   def index
     @pictures = Picture.all
+    @pictures = @pictures.joins(:labels).where(labels: { id: params[:label_id] }) if params[:label_id].present?
   end
 
   # GET /pictures/1 or /pictures/1.json
@@ -23,6 +24,7 @@ class PicturesController < ApplicationController
 
   # POST /pictures or /pictures.json
   def create
+    binding.pry
     @picture = current_user.pictures.build(picture_params)   
     respond_to do |format|
       if @picture.save
@@ -59,12 +61,12 @@ class PicturesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_picture
-      @picture = Picture.find(params[:id])
-    end
+  def set_picture
+    @picture = Picture.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def picture_params
-      params.require(:picture).permit(:image, :content, :image_cache, :user_id)
-    end
+  # Only allow a list of trusted parameters through.
+  def picture_params
+    params.require(:picture).permit(:image, :content, :image_cache, :user_id, label_ids: [])
+  end
 end
