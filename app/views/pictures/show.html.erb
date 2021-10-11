@@ -23,7 +23,8 @@
 <br>
 <div>
   <% if @picture.user == current_user %>
-    <%= link_to '編集', edit_picture_path(@picture) %> 
+    <%= link_to '編集', edit_picture_path(@picture) %>
+    <%= link_to '削除', picture_path(@picture), method: :delete, data: { confirm: '本当に削除しますか?' } %>
   <% end %>
 </div>
 <div>
