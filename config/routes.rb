@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'pictures#index'
+  root 'tops#index'
   resources :pictures
   resources :favorites, only: [:create, :destroy, :index]
   devise_for :users

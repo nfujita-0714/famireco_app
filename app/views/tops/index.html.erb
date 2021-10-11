@@ -1,0 +1,11 @@
+<h1>TOPページ</h1>
+<p>概要説明</p>
+
+<div>
+  <% unless user_signed_in? %>
+    <ul class="top_link">
+      <li><%= link_to "ログイン", new_user_session_path %></li><br>
+      <li><%= link_to "ユーザー登録", new_user_registration_path %></li><br>
+    </ul>
+  <% end %>
+</div>
