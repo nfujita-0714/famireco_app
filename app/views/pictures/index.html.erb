@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
+<h1>投稿一覧</h1>
 
-<h1>Pictures</h1>
+<%= link_to '投稿', new_picture_path %>
+<%= link_to 'マイページ', user_path(current_user) %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @pictures.each do |picture| %>
-      <tr>
-        <td><%= image_tag picture.image.url %></td>
-        <td><%= picture.content %></td>
-        <td><%= link_to 'Show', picture %></td>
-        <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-        <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+
+<div>
+  <% @pictures.each do |picture| %>
+    <div>
+      <%= image_tag picture.image.url %>
+    </div>
+    <%= link_to 'ユーザー詳細', user_path(picture.user) %>
+    <div>
+      <%= picture.content %>       
+      <% picture.labels.each do |label| %>
+        <%= label.name %>
+      <% end %>
+      <br>
+      <%= link_to '投稿詳細', picture_path(picture) %>
+    </div>
+  <% end %>
+</div>
 
 <br>
+<div class="index_page">
+  <%= paginate @pictures %>
+</div>
 
-<%= link_to 'New Picture', new_picture_path %>

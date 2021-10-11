@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :pictures
   has_many :favorites, dependent: :destroy
+  has_many :fav_pictures, through: :favorites, source: :picture
+
 end
