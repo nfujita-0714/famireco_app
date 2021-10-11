@@ -20,6 +20,15 @@
       <li class="active"><%= link_to "ログイン", new_user_session_path %></li>
     <% end %>
   </ul>
+
+  <div class="alert-space">
+    <% if notice %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+  </div>
     <%= yield %>
   </body>
 </html>
