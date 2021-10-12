@@ -1,0 +1,24 @@
+<h1>検索した投稿一覧</h1>
+
+<div>
+  <% @results.each do |result| %>
+    <div>
+      <%= image_tag result.image.url %>
+    </div>
+    <%= link_to 'ユーザー詳細', user_path(result.user) %>
+    <div>
+      <%= result.created_at.strftime('%Y/%m/%d') %>
+      <%= result.content %>       
+      <% result.labels.each do |label| %>
+        <%= label.name %>
+      <% end %>
+      <br>
+      <%= link_to '投稿詳細', picture_path(result) %>
+    </div>
+  <% end %>
+</div>
+
+<br>
+<div class="back_page">
+  <%= link_to "戻る", pictures_path %>
+</div>

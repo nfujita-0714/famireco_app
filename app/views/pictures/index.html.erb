@@ -3,8 +3,14 @@
 <%= link_to '投稿', new_picture_path %>
 <%= link_to 'マイページ', user_path(current_user) %>
 
-
-
+<div>
+  <%= search_form_for @q, url: search_pictures_path do |f| %>
+    <%= f.label :name_cont, '投稿者で検索' %>
+    <%= f.search_field :user_name_cont %>
+    <br>
+    <%= f.submit '検索' %>
+  <% end %>
+</div>
 
 <div>
   <% @pictures.each do |picture| %>
