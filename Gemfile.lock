@@ -308,6 +308,8 @@ DEPENDENCIES
   devise-i18n-views
   dotenv-rails
   jbuilder (~> 2.5)
+  jquery-rails
+  jquery-ui-rails
   kaminari
   letter_opener_web
   listen (>= 3.0.5, < 3.2)
