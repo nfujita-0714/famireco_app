@@ -1,13 +1,31 @@
-<h1>TOPページ</h1>
-<p>概要説明</p>
-
+<div class="container">
+  <div class="row">
+    <div class="top_explain">
+      <h2>famireco</h2>
+      <p>概要説明</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+  
 <div>
-  <% unless user_signed_in? %>
-    <ul class="top_link">
-      <li><%= link_to "ログイン", new_user_session_path %></li><br>
-      <li><%= link_to "ユーザー登録", new_user_registration_path %></li><br>
-      <li><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %></li><br>
-      <li><%= link_to '管理者ゲストログイン', users_guest_admin_sign_in_path, method: :post %></li><br>
-    </ul>
-  <% end %>
+  <div class="row">
+    <div class="top_button">
+      <% unless user_signed_in? %>
+        <div class="top_link">
+          <%= link_to '　　　ログイン　　　', new_user_session_path, class:"btn btn-info" %><br><br>
+          <%= link_to '　　ユーザー登録　　', new_user_registration_path, class:"btn btn-info" %><br><br>
+          <%= link_to '　ゲストログイン　　', users_guest_sign_in_path, method: :post, class:"btn btn-info" %><br><br>
+          <%= link_to '管理者ゲストログイン', users_guest_admin_sign_in_path, method: :post, class:"btn btn-info" %><br><br>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+

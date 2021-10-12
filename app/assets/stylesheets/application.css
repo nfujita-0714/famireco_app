@@ -14,3 +14,28 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+  height: 60px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: table;
+  position: fixed;
+  text-align: center;
+  z-index:1;
+}
+footer {
+  background-color: #FFBB30;
+  height: 60px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: table;
+  position: fixed;
+  text-align: center;
+}
+.container-fluid {
+  background-color: #FFBB30;
+  height: 60px;
+}
