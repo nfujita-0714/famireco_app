@@ -6,6 +6,8 @@
     <ul class="top_link">
       <li><%= link_to "ログイン", new_user_session_path %></li><br>
       <li><%= link_to "ユーザー登録", new_user_registration_path %></li><br>
+      <li><%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %></li><br>
+      <li><%= link_to '管理者ゲストログイン', users_guest_admin_sign_in_path, method: :post %></li><br>
     </ul>
   <% end %>
 </div>
