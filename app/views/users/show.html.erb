@@ -24,5 +24,8 @@
         <%= link_to '削除', user_registration_path(@user), method: :delete, class: 'btn btn-danger', data: { confirm: '本当に削除しますか?' } %>
       <% end %>
     </div>
+    <div class="back">
+      <%= link_to "戻る", pictures_path, class:"btn btn-default" %>
+    </div>
   </div>
 </div>

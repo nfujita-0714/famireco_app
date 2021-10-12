@@ -2,10 +2,10 @@
   <h2 class="title_user">投稿一覧</h2>
   <div class="row">
     <div class="index_button col-md-6">
-      <%= link_to '　投　稿　', new_picture_path, class:"btn btn-default" %>
+      <%= link_to '　投　稿　', new_picture_path, class:"btn btn-warning" %>
     </div>
     <div class="index_button col-md-6">    
-      <%= link_to 'マイページ', user_path(current_user), class:"btn btn-default" %>
+      <%= link_to '　マイページ　', user_path(current_user), class:"btn btn-warning" %>
     </div>
   </div>
   <br>
@@ -47,7 +47,7 @@
       <div class="picture_image">
         <%= image_tag picture.image.url, :size =>'320x320' %>
         <div class="picture_user">
-          <%= link_to 'ユーザー詳細', user_path(picture.user), class:"btn btn-info btn-xs" %>
+          <%= link_to 'ユーザー詳細', user_path(picture.user), class:"btn btn-default btn-xs" %>
         </div>
         <div class="picture_index_list">
           <%= picture.created_at.strftime('%Y/%m/%d') %><br>
@@ -57,7 +57,7 @@
             ラベル：<%= label.name %>
           <% end %>
           <br>
-          <%= link_to '　投稿詳細　', picture_path(picture),class:"btn btn-default btn-xs" %>
+          <%= link_to '　投稿詳細　', picture_path(picture),class:"btn btn-info btn-xs" %>
         </div>
       </div>
     <% end %>

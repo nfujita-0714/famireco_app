@@ -1,5 +1,7 @@
-<h1>投稿</h1>
+<h2 class="title_user">投稿</h2>
 
 <%= render 'form', picture: @picture %>
 
-<%= link_to 'Back', pictures_path %>
+<div class="back">
+  <%= link_to "戻る", pictures_path, class:"btn btn-default" %>
+</div>
