@@ -1,12 +1,15 @@
 ja:
   activerecord:
     models:
-      blog: ブログ
+      picture: 画像投稿
       user: ユーザー
+      favorite: お気に入り
+      label: ラベル
     attributes:
-      blog:
-        title: タイトル
+      picture:
+        image: 画像
         content: 内容
+        created_at: 作成日
       user:
         title: タイトル
         name: 名前
@@ -16,3 +19,4 @@ ja:
         password_confirmation: 確認用パスワード
         remember_me: ログインを記憶
         self_introduction: 自己紹介
+        

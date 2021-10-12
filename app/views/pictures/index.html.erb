@@ -31,14 +31,15 @@
 <div>
   <% @pictures.each do |picture| %>
     <div>
-      <%= image_tag picture.image.url %>
+      <%= image_tag picture.image.url, :size =>'320x320' %>
     </div>
+    <%= picture.created_at.strftime('%Y/%m/%d') %><br>
+    投稿者：<%= picture.user.name %>
     <%= link_to 'ユーザー詳細', user_path(picture.user) %>
     <div>
-      <%= picture.created_at.strftime('%Y/%m/%d') %>
-      <%= picture.content %>       
+    内容：<%= picture.content %><br>      
       <% picture.labels.each do |label| %>
-        <%= label.name %>
+        ラベル：<%= label.name %>
       <% end %>
       <br>
       <%= link_to '投稿詳細', picture_path(picture) %>
