@@ -16,7 +16,7 @@ class User < ApplicationRecord
   
   def self.admin_guest
     find_or_create_by!(name: '管理者ゲスト', self_introduction: '管理者ゲストです。お試し中です', email: 'admin_guest@example.com', admin: true) do |user|
-      user.password = SecureRandom.alphanumeric()
+      user.password = "password"
     end
   end
 end

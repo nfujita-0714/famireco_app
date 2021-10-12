@@ -3,14 +3,15 @@
 <div>
   <% @results.each do |result| %>
     <div>
-      <%= image_tag result.image.url %>
+      <%= image_tag result.image.url, :size =>'320x320' %>
     </div>
+    <%= result.created_at.strftime('%Y/%m/%d') %><br>
+    投稿者：<%= result.user.name %>
     <%= link_to 'ユーザー詳細', user_path(result.user) %>
     <div>
-      <%= result.created_at.strftime('%Y/%m/%d') %>
-      <%= result.content %>       
+    内容：<%= result.content %>       
       <% result.labels.each do |label| %>
-        <%= label.name %>
+        ラベル：<%= label.name %>
       <% end %>
       <br>
       <%= link_to '投稿詳細', picture_path(result) %>
