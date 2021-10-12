@@ -3,8 +3,30 @@
 <%= link_to '投稿', new_picture_path %>
 <%= link_to 'マイページ', user_path(current_user) %>
 
+<div>
+  <h3>検索機能</h3>
+  <%= search_form_for @q, url: search_pictures_path do |f| %>
+    <div>
+      <%= f.label :user_name_cont, '投稿者' %>
+      <%= f.search_field :user_name_cont %>
+    </div>
 
+    <div>
+      <%= f.label :created_at_gteq, '投稿日～' %>
+      <%= f.date_field :created_at_gteq, include_blank: true, class: 'form-control' %>
+    </div>
 
+    <div>
+      <%= f.label :created_at_gteq, '～投稿日' %>
+      <%= f.date_field :created_at_lteq, include_blank: true, class: 'form-control' %>
+    </div>
+    <div>
+    <%= f.label :user_name_cont, 'ラベル' %>
+      <%= f.collection_select :labels_id_eq, Label.where.not(id: 0), :id, :name, include_blank: "ラベル選択", class:"search-select-box"  %>
+    </div>
+    <%= f.submit '検索' %>
+  <% end %>
+</div>
 
 <div>
   <% @pictures.each do |picture| %>
@@ -13,6 +35,7 @@
     </div>
     <%= link_to 'ユーザー詳細', user_path(picture.user) %>
     <div>
+      <%= picture.created_at.strftime('%Y/%m/%d') %>
       <%= picture.content %>       
       <% picture.labels.each do |label| %>
         <%= label.name %>

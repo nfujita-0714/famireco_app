@@ -1,6 +1,7 @@
 class PicturesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_picture, only: %i[ show edit update destroy ]
+  before_action :set_q, only: [:index, :search]
 
   # GET /pictures or /pictures.json
   def index
@@ -58,7 +59,15 @@ class PicturesController < ApplicationController
     end
   end
 
+  def search
+    @results = @q.result(distinct: true) #distinct=>結果の重複を防ぐ
+  end
+  
   private
+  def set_q
+    @q = Picture.ransack(params[:q])
+  end
+
     # Use callbacks to share common setup or constraints between actions.
   def set_picture
     @picture = Picture.find(params[:id])
