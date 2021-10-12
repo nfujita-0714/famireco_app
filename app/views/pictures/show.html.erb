@@ -1,8 +1,13 @@
+<h1>投稿詳細</h1>
+
 <div>
   <%= image_tag @picture.image.url %>
 </div>
 
 <div>
+  <strong>Create_at:</strong>
+  <%= @picture.created_at.strftime('%Y/%m/%d') %>
+  <br>
   <strong>Content:</strong>
   <%= @picture.content %>
 </div>
