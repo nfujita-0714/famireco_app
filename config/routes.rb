@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'tops#index'
   resources :pictures
   resources :favorites, only: [:create, :destroy, :index]
