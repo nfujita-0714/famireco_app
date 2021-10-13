@@ -1,20 +1,31 @@
-<h1><%= @user.name %>のページ</h1>
-
-<p>
-  <strong>名前:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>自己紹介:</strong>
-  <%= @user.self_introduction %>
-</p>
-
-<div class="choice">
-  <% if @user.id == current_user.id %>
-    <%= link_to "お気に入り一覧", favorites_path %>
+<div class="container">
+  <h2 class="title_user"><%= @user.name %>のページ</h2>
+  <div class="row">
+    <div class="choice">
+      <p>
+        <strong>名前:</strong>
+        <%= @user.name %>
+      </p>
+      <br>
+      <p>
+        <strong>自己紹介:</strong>
+        <%= @user.self_introduction %>
+      </p>
+    </div>
     <br>
-    <%= link_to "編集", edit_user_registration_path(@user), class: 'btn btn-success' %>
-    <%= link_to '削除', user_registration_path(@user), method: :delete, class: 'btn btn-danger', data: { confirm: '本当に削除しますか?' } %>
-  <% end %>
+    <br>
+    <div class="choice">
+      <% if @user.id == current_user.id %>
+        <%= link_to "お気に入り一覧", favorites_path, class:"btn btn-info" %>
+        <br>
+        <br>
+        <br>
+        <%= link_to "編集", edit_user_registration_path(@user), class: 'btn btn-success' %>
+        <%= link_to '削除', user_registration_path(@user), method: :delete, class: 'btn btn-danger', data: { confirm: '本当に削除しますか?' } %>
+      <% end %>
+    </div>
+    <div class="back">
+      <%= link_to "戻る", pictures_path, class:"btn btn-default" %>
+    </div>
+  </div>
 </div>
