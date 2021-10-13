@@ -38,7 +38,7 @@ class PicturesController < ApplicationController
   def update
     respond_to do |format|
       if @picture.update(picture_params)
-        format.html { redirect_to @picture, notice: "Picture was successfully updated." }
+        format.html { redirect_to @picture, notice: "投稿を編集しました" }
         format.json { render :show, status: :ok, location: @picture }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,7 +51,7 @@ class PicturesController < ApplicationController
   def destroy
     @picture.destroy
     respond_to do |format|
-      format.html { redirect_to pictures_url, notice: "Picture was successfully destroyed." }
+      format.html { redirect_to pictures_url, notice: "投稿を削除しました" }
       format.json { head :no_content }
     end
   end
