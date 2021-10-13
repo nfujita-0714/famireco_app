@@ -18,11 +18,14 @@
           <%= search_form_for @q, url: search_pictures_path do |f| %>
             <div class="col-md-1">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
               <%= f.search_field :user_name_cont, placeholder: '投稿者' %>
             </div>
+            <div class="col-md-1">
+            　　投稿日
+            </div>
             <div class="col-md-2">
-            <%= f.date_field :created_at_gteq, include_blank: true %>
+              <%= f.date_field :created_at_gteq, include_blank: true %>
             </div>
             <div class="col-md-1">
             　　～
