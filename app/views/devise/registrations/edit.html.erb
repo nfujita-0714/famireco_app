@@ -1,5 +1,5 @@
 <div class="container">
-  <h2 class="title_user">ユーザー編集</h2>
+  <h2 class="title_user"><%= t('.title', resource: resource.model_name.human) %></h2>
 
   <div class="form_box">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -44,20 +44,15 @@
       </div>
 
       <div class="actions">
-        <%= f.submit "　　　　　更新　　　　　　" %>
+        <%= f.submit t('.update') %>
       </div>
-      <br>
-      <br>
-      <div>  
-      <%= button_to "　　　アカウント削除　　　", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %><br>
-      <br>
-      <br>
+      <div class="back">
       <%= link_to '戻る', user_path(current_user), class:"btn btn-default" %>
-      <br>
-      <br>  
-      <br>
-      <br>
       </div>
-    <% end %>
+      <% end %>
+      
+    </div>
   </div>
+  <br>
+  <br>
 </div>

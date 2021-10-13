@@ -3,7 +3,7 @@
     <%= form_with(model: picture, local: true) do |form| %>
       <% if picture.errors.any? %>
         <div id="error_explanation">
-          <h2><%= pluralize(picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
+          <h2><%= t("errors.template.header", model: Picture.model_name.human, count: picture.errors.count) %></h2>
 
           <ul>
           <% picture.errors.full_messages.each do |message| %>
@@ -20,7 +20,7 @@
 
     <div class="field">
       <%= form.label :content %>
-      <%= form.text_area :content %>
+      <%= form.text_area :content, placeholder: '写真の説明を記入' %>
     </div>
     
     <div class="field">

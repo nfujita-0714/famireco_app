@@ -9,14 +9,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  # def after_sign_up_path_for(resource)
-  #   user_path(id: current_user.id)
-  # end
+  def after_sign_up_path_for(resource)
+    pictures_path
+  end
 
 
-  # def after_update_path_for(resource)
-  #   user_path(id: current_user.id)
-  # end
+
 end
 
   # before_action :configure_sign_up_params, only: [:create]
@@ -43,9 +41,9 @@ end
   # end
 
   # DELETE /resource
-  # def destroy
-  #   super
-  # end
+  def destroy
+    super
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
