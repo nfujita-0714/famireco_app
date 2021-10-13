@@ -48,7 +48,11 @@
   <div class="row">
     <% @pictures.each do |picture| %>
       <div class="picture_image">
-        <%= image_tag picture.image.url, :size =>'320x320' %>
+        <% if picture.image? %>
+          <%= image_tag picture.image.url, :size =>'320x320' %>
+        <% else %>
+          <%= image_tag ("default.png"), :size =>'320x320' %>
+        <% end %>
         <div class="picture_user">
           <%= link_to 'ユーザー詳細', user_path(picture.user), class:"btn btn-default btn-xs" %>
         </div>
