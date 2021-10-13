@@ -4,7 +4,7 @@ FactoryBot.define do
     user { nil }
   end
 
-  factory :picture02 class: Picture do
+  factory :picture02, class: Picture do
     content { 'picture02' }
     user { nil }
   end
