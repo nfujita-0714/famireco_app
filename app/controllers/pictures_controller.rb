@@ -21,6 +21,9 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1/edit
   def edit
+    if current_user.id != @picture.user.id
+      redirect_to pictures_path, alert: '他人の投稿は編集できません'
+    end
   end
 
   # POST /pictures or /pictures.json

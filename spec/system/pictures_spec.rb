@@ -73,9 +73,29 @@ RSpec.describe '投稿機能', type: :system do
         fill_in 'q[created_at_lteq]', with: '2021-09-30'
         click_on '検索'
         expect(page).to have_content '2021/09/10'
+        expect(page).not_to have_content '2021/10/10'
       end
     end
   end
 
-
+  describe 'アクセス制限に関するテスト' do
+    context 'ログインしていない場合' do
+      it '新規投稿画面に飛べず、投稿することができない' do
+        visit new_picture_path
+        expect(page).to have_content 'ログインもしくはアカウント登録してください'
+      end
+    end
+    context 'ログイン後、他人の投稿を編集しようとした場合' do
+    before do
+      visit new_user_session_path
+      fill_in 'user[email]', with: 'basic_email@gmail.com'
+      fill_in 'user[password]', with: 'password'
+      click_button 'ログイン'
+    end
+      it '編集することができない' do
+        visit edit_picture_path(@picture02)
+        expect(page).to have_content '他人の投稿は編集できません'
+      end
+    end
+  end
 end
